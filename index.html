@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /* General Styles */
+body {
+    background-color: #13baba;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+body {
+            background-color: #13baba;
+        }
+        .navbar {
+            background-color: #29b1b1;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: rgb(13, 12, 12) !important;
+        }
+
+/* Content and Boxes */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    font-size: 2rem;
+}
+.box {
+    width: 100%;
+    padding: 10px;
+    color: black;
+    text-align: center;
+     font-size: 3rem;
+}
+
+#bobzi {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#icon i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/* Portfolio Section */
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.portfolio-box {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.button-container {
+    text-align: center;
+    justify-content: center;
+}
+
+.beautiful-button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 20PX;
+    margin-right: 80px;
+}
+
+.beautiful-button:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+.beautiful-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.h1{
+    color: white;
+    text-align: center;
+    margin-top: 120px;
+}
+.view-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: white;
+    color: rgb(206, 13, 174);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.view-button:hover {
+    background-color: black;
+}
+
+/* Contact Form */
+.form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#id {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.massage {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid white;
+    background-color: #13baba;
+}
+
+/* Footer */
+.new-footer {
+    background-color: #29b1b1;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.footer-bottom {
+    padding: 15px 0;
+    font-size: 14px;
+    color: #141212;
+}
+#b{
+    color:white;
+}
+#element{
+    color:white;
+    font-size: 2rem;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    .ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-container {
+        flex-direction: column;
+    }
+@media (min-width: 768px) {
+  .portfolio-box img {
+    width: 100%;
+    max-width: 500px; /* ya jitni aapko theek lage */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
+    .portfolio-box {
+        max-width: 90%;
+    }
+
+    .view-button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    #bobzi {
+        font-size: 1.5rem;
+    }
+
+    .logo a {
+        font-size: 1.2rem;
+    }
+
+    .beautiful-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+.portfolio-box button a{
+      text-decoration: none;
+      color: rgb(206, 13, 174);;
+}
+.tool-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.tool-icon {
+  width: 40px;   /* ya jitna aapko suit kare */
+  height: 40px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/">Shoaib's Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://hafiz-shoaib-web-developer.github.io/my-projects/">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="box" id="bobzi">
+            <div>Hi</div>
+             My  Name  is <l id="b">shoaib</l> and
+             <div>i am a passionate</div>
+             <div id="element">thumbnail designer</div>
+             </div>
+        <div id="icon">
+            <div class="tool-icons">
+
+           </div>
+        </div>
+        </div>
+        <div class="box">
+          <!---<img src="PngItem_1127587.png" width="70%">--->
+
+        </div>
+    </div>
+    <hr class="hr">
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="3.png" alt="Project 1">
+          <button class="view-button"><a href="3.png">view project</a></button>
+        </div>
+        <div class="portfolio-box">
+          <img src="2.png" alt="project 2">
+          <a href="2.jpg" target="_blank">
+          <button class="view-button"><a href="2.png">view project</a></button>
+        </div>
+      </div>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="1.png" alt="Project 1">
+        <button class="view-button"><a href="1.png">view project</a></button>
+        </div>
+        <div class="portfolio-box">
+          <img src="4.png">
+          <button class="view-button"><a href="4.png">view project</a></button>
+        </div>
+      </div>
+      <div>
+        <hr class="hr">
+      <h1 class="h1">Enter your Details</h1>
+      <form action="php" class="form">
+          <input type="text" placeholder="NAME" id="id">
+          <br>
+          <br>
+          <input type="text" placeholder="EMAIL" id="id">
+          <br>
+          <br>
+          <input type="text" placeholder="PHONE NUMBER" id="id">
+          <br>
+          <br>
+          <input type="text" placeholder="ADRESS" id="id">
+          <br>
+              <br>
+              <label for="message"></label>
+              <textarea id="message" name="message" rows="5" required class="massage">your massage</textarea>
+      </form>
+      <div class="button-container">
+          <button class="beautiful-button" id="submitButton">submit</button></a></button>
+      </div>
+      </div>
+      <footer class="new-footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Shoaib's Portfolio</h3>
+            <p>A professional thumbnail designer <br>with modern  technologies.</p>
+          </div>
+          <div class="footer-section contact">
+            <h3>for more info</h3>
+            <p>Email: shoaib-coding-vala@gmail.com</p>
+            <p>Phone: +92 3460206227</p>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contact Me</h3>
+            <p>Email: shoaib-coding-vala@gmail.com</p>
+            <p>Phone: +92 3460206227</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Shoaib's Portfolio | All Rights Reserved</p>
+        </div>
+      </footer>
+      
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementsByClassName("navbar navbar-expand-lg navbar-light");
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px"; // Hide the sidebar
+            } else {
+                sidebar.style.left = "0"; // Show the sidebar
+            }
+        }
+      </script>
+</body>
+</html>
